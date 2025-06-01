@@ -1,0 +1,45 @@
+CREATE TABLE StudentCourses (
+    student_id INTEGER,
+    course_name VARCHAR(100),
+    course_id TEXT,
+    midterm_grade REAL,
+    final_grade REAL,
+    PRIMARY KEY (student_id,course_id)
+);
+
+
+CREATE TABLE Students (
+FullName VARCHAR(100),
+    ID INT PRIMARY KEY,
+    Email VARCHAR(100),
+    Password VARCHAR(100),
+    
+    StuMobile VARCHAR(11),
+    ParentMobile VARCHAR(11),
+    
+    Level VARCHAR(1),
+    Address VARCHAR(100),
+    Age INT,
+    Gender VARCHAR(10)
+    
+);
+
+CREATE TABLE Teachers (
+    ID INT PRIMARY KEY,
+    FullName VARCHAR(100) NOT NULL,
+    TeacherMobile VARCHAR(20),
+    Email VARCHAR(100),
+    Address VARCHAR(100),
+    Age INT,
+    Gender VARCHAR(10),
+    CourseCode VARCHAR(100)
+    
+    
+);
+
+CREATE TABLE Admins (
+    Username VARCHAR(50) PRIMARY KEY,
+    Password VARCHAR(100) NOT NULL
+);
+INSERT INTO Admins (Username, Password) VALUES
+('admin', '0000');
